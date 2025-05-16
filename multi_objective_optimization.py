@@ -155,4 +155,5 @@ plt.legend()
 plt.grid(True)
 
 plt.tight_layout()
+plt.savefig("Images/multi_objective_optimization.png")
 plt.show()

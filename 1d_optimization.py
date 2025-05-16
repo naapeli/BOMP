@@ -20,7 +20,7 @@ from sklearn.preprocessing import StandardScaler, RobustScaler, MinMaxScaler
 
 # ==================== DATA ====================
 torch.manual_seed(1)
-xmin, xmax, N = -5, 4, 500  # originally xmax = 5
+xmin, xmax, N = -5, 4, 100  # originally xmax = 5
 true_coeffs = [0.0, 3.488378906, 0.0, -0.855187500, 0.0, 0.107675000, 0.0, -0.005857143, 0.0, 0.000111111]
 # X = torch.linspace(xmin, xmax, N, dtype=torch.float64).unsqueeze(-1)
 # m = 400
@@ -31,8 +31,9 @@ X = torch.rand(size=(N, 1), dtype=torch.float64) * (xmax - xmin) + xmin
 y = sum(c * X ** i for i, c in enumerate(true_coeffs))
 mask = -(X - xmin) * (X - xmax) / 50
 y_true = y * mask
-y = y_true + torch.normal(0, 1, size=(N, 1))
+y = y_true + torch.normal(0, 0.3, size=(N, 1))
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.9)
+x_plot = torch.linspace(xmin, xmax, 1000).unsqueeze(-1)
 # feature_scaler = StandardScaler()
 # X_train = torch.from_numpy(feature_scaler.fit_transform(X_train))
 # X_test = torch.from_numpy(feature_scaler.transform(X_test))
@@ -93,34 +94,34 @@ with torch.no_grad(), fast_pred_var():
     model.likelihood.eval()
 
     if bo_torch == 0:
-        post = model.likelihood(model(X_test))
+        post = model.likelihood(model(x_plot))
     elif bo_torch == 1:
-        post = model.posterior(X_test)
+        post = model.posterior(x_plot)
     mean = torch.from_numpy(target_scaler.inverse_transform(post.mean.reshape(-1, 1))).squeeze()
     stddev = post.stddev * target_scaler.scale_[0]
     # mean = post.mean.squeeze()
     # stddev = post.stddev
     lower, upper = mean - 1.96 * stddev, mean + 1.96 * stddev
 
-plt.figure()
+plt.figure(figsize=(12, 8))
 plt.subplot(2, 1, 1)
 plt.plot(X_train, torch.from_numpy(target_scaler.inverse_transform(y_train.reshape(-1, 1))).squeeze(), ".", label="Training data")
 # plt.plot(test, mean, label="Predictions")
 # plt.fill_between(test.squeeze(), lower.squeeze(), upper.squeeze(), color='gray', alpha=0.5, label="95% Confidence Interval")
 # plt.plot(X_train, y_train.squeeze(), ".", label="Training data")
-plt.plot(X_test, mean, label="Predictions")
+plt.plot(x_plot, mean, label="Predictions")
 temp, indicies = torch.sort(X, dim=0)
 indicies = indicies.squeeze()
 plt.plot(temp, y_true[indicies], label="True curve")
-plt.fill_between(X_test.squeeze(), lower.squeeze(), upper.squeeze(), color='gray', alpha=0.5, label="95% Confidence Interval")
+plt.fill_between(x_plot.squeeze(), lower.squeeze(), upper.squeeze(), color='gray', alpha=0.5, label="95% Confidence Interval")
 
 
 BATCH_SIZE = 1
 NUM_RESTARTS = 10
 RAW_SAMPLES = 200
 
-# acq_func = qLogExpectedImprovement(model=model, best_f=y_train.max(), sampler=SobolQMCNormalSampler(torch.Size([1])),)
-acq_func = qLogNoisyExpectedImprovement(model, X_train, sampler=SobolQMCNormalSampler(torch.Size([1])))
+acq_func = qLogExpectedImprovement(model=model, best_f=y_train.max(), sampler=SobolQMCNormalSampler(torch.Size([1])),)
+# acq_func = qLogNoisyExpectedImprovement(model, X_train, sampler=SobolQMCNormalSampler(torch.Size([1])))
 # acq_func = LogProbabilityOfImprovement(model, y_train.max())
 
 candidates, _ = optimize_acqf(
@@ -135,7 +136,6 @@ candidates, _ = optimize_acqf(
 for item in candidates.squeeze(-1):
     plt.axvline(item.numpy(), label="Optimal next point")
 plt.legend()
-
 
 plt.subplot(2, 1, 2)
 X_acq_plot = torch.linspace(xmin, xmax, 1000).unsqueeze(-1)
@@ -152,4 +152,5 @@ plt.title("Acquisition Function Landscape")
 plt.grid(True)
 plt.legend()
 
+plt.savefig("Images/1d_acquisition_function.png")
 plt.show()
