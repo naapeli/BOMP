@@ -185,7 +185,7 @@ plt.ylabel("Log Hypervolume Difference")
 plt.legend(loc="lower left")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("sequential_hypervolumes.png")
+plt.savefig("Images/sequential_hypervolumes.png")
 
 
 fig, axes = plt.subplots(1, 3, figsize=(14, 6), sharex=True, sharey=True)
@@ -213,7 +213,7 @@ fig.subplots_adjust(right=0.88)
 cbar_ax = fig.add_axes([0.9, 0.15, 0.015, 0.7])
 cbar = fig.colorbar(sm, cax=cbar_ax)
 cbar.ax.set_title("Iteration")
-plt.savefig("sequential_samples.png")
+plt.savefig("Images/sequential_samples.png")
 
 
 n_iters = N_ROUNDS + 1
