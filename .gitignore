@@ -1,4 +1,6 @@
 /moo_bo_botorch.ipynb
+/experimenting_with_multitask_gp.ipynb
 /botorch_example.ipynb
 *.csv
 /venv
+/NDA
