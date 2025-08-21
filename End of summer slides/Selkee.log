@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.9)  21 AUG 2025 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.9)  21 AUG 2025 13:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/aatus/ohjelmointi/BOMP/Summer event slides/Selkee.tex"
-(c:/Users/aatus/ohjelmointi/BOMP/Summer event slides/Selkee.tex
+**"c:/Users/aatus/ohjelmointi/BOMP/End of summer slides/Selkee.tex"
+(c:/Users/aatus/ohjelmointi/BOMP/End of summer slides/Selkee.tex
 LaTeX2e <2025-06-01>
 L3 programming layer <2025-05-26>
 (C:\Users\aatus\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -956,20 +956,20 @@ Dictionary: translator-theorem-dictionary, Language: English
 [1
 
 {C:/Users/aatus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
 
 
 (C:\Users\aatus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 
 
 (C:\Users\aatus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 28.
+ut line 26.
 
 (C:\Users\aatus\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathk
 erncmss.fd
@@ -980,41 +980,45 @@ thkerncmss.
 [2
 
 ]
-<./July presentation/sausage_plot.pdf, id=68, 578.16pt x 361.35pt>
-File: ./July presentation/sausage_plot.pdf Graphic file (type pdf)
-<use ./July presentation/sausage_plot.pdf>
-Package pdftex.def Info: ./July presentation/sausage_plot.pdf  used on input li
-ne 36.
-(pdftex.def)             Requested size: 307.28987pt x 192.05493pt.
+<../Images/EndOfSummerPresentation/TSPredDemoLinear.pdf, id=69, 867.24pt x 433.
+62pt>
+File: ../Images/EndOfSummerPresentation/TSPredDemoLinear.pdf Graphic file (type
+ pdf)
+<use ../Images/EndOfSummerPresentation/TSPredDemoLinear.pdf>
+Package pdftex.def Info: ../Images/EndOfSummerPresentation/TSPredDemoLinear.pdf
+  used on input line 34.
+(pdftex.def)             Requested size: 307.28987pt x 153.64174pt.
 
 
 [3
 
- <./July presentation/sausage_plot.pdf>]
-<../Images/DeepKernelLearning/DKL_result_X.png, id=136, 849.1725pt x 354.123pt>
-
-File: ../Images/DeepKernelLearning/DKL_result_X.png Graphic file (type png)
-<use ../Images/DeepKernelLearning/DKL_result_X.png>
-Package pdftex.def Info: ../Images/DeepKernelLearning/DKL_result_X.png  used on
- input line 49.
-(pdftex.def)             Requested size: 276.559pt x 115.33176pt.
-<../Images/DeepKernelLearning/DKL_result_Y.png, id=138, 409.7709pt x 328.8285pt
->
-File: ../Images/DeepKernelLearning/DKL_result_Y.png Graphic file (type png)
-<use ../Images/DeepKernelLearning/DKL_result_Y.png>
-Package pdftex.def Info: ../Images/DeepKernelLearning/DKL_result_Y.png  used on
- input line 49.
-(pdftex.def)             Requested size: 153.64493pt x 123.29533pt.
-
-Overfull \vbox (12.35397pt too high) detected at line 49
- []
-
+ <../Images/EndOfSummerPresentation/TSPredDemoLinear.pdf>]
+<../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodic.pdf, id=127, 867.24
+pt x 433.62pt>
+File: ../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodic.pdf Graphic fi
+le (type pdf)
+<use ../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodic.pdf>
+Package pdftex.def Info: ../Images/EndOfSummerPresentation/TSPredDemoLinearPeri
+odic.pdf  used on input line 42.
+(pdftex.def)             Requested size: 307.28987pt x 153.64174pt.
 
 
 [4
 
- <../Images/DeepKernelLearning/DKL_result_X.png> <../Images/DeepKernelLearning/
-DKL_result_Y.png>]
+ <../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodic.pdf>]
+<../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodicRBF.pdf, id=184, 867
+.24pt x 433.62pt>
+File: ../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodicRBF.pdf Graphic
+ file (type pdf)
+<use ../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodicRBF.pdf>
+Package pdftex.def Info: ../Images/EndOfSummerPresentation/TSPredDemoLinearPeri
+odicRBF.pdf  used on input line 50.
+(pdftex.def)             Requested size: 307.28987pt x 153.64174pt.
+
+
+[5
+
+ <../Images/EndOfSummerPresentation/TSPredDemoLinearPeriodicRBF.pdf>]
 \tf@nav=\write6
 \openout6 = `Selkee.nav'.
 
@@ -1024,7 +1028,8 @@ DKL_result_Y.png>]
 \tf@snm=\write8
 \openout8 = `Selkee.snm'.
 
- (Selkee.aux)
+
+(Selkee.aux)
  ***********
 LaTeX2e <2025-06-01>
 L3 programming layer <2025-05-26>
@@ -1033,20 +1038,21 @@ Package rerunfilecheck Info: File `Selkee.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21673 strings out of 468225
- 421056 string characters out of 5432974
- 789648 words of memory out of 5000000
+ 21676 strings out of 468225
+ 421485 string characters out of 5432974
+ 789652 words of memory out of 5000000
  49746 multiletter control sequences out of 15000+600000
- 637369 words of font info for 78 fonts, out of 8000000 for 9000
+ 637663 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,14n,123p,435b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,14n,123p,436b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aatus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmss10.pfb><C:/Users/aatus/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmss12.pfb><C:/Users/aatus/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/symbols/msam10.pfb>
-Output written on Selkee.pdf (4 pages, 163979 bytes).
+ublic/amsfonts/cm/cmssbx10.pfb><C:/Users/aatus/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Selkee.pdf (5 pages, 168918 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
